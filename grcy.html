@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+</head>
+<body>
+
+    <button id="list">Grocery List</button>
+    <table>
+        <thead>
+            <tr>
+                <td>Sl_No</td>
+                <td>Item</td>
+                <td>Quantity</td>
+                <td>Unit</td>
+                <td>Department</td>
+                <td>Unit</td>
+            </tr>
+        </thead>
+
+        <tbody id="result_area">
+            <tr>
+                <td>Click for list</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script >
+
+        // fetch("./grcy.json").then(response => response.json())
+                        // .then(json => console.log(json));;
+        var xhr=new XMLHttpRequest();//xml http req
+        xhr.open("get","grcy.json");
+        // xhr.send();
+
+        document.getElementById("list").addEventListener("click",function(){
+            xhr.send();
+        })
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4){
+                if(xhr.status==200){
+                    var result_data=JSON.parse(xhr.responseText);
+                    //console.log(result_data);
+                    var content="";
+                    for(i=0;i<result_data.length;++i){
+                        var current_record= result_data[i];
+                        console.log(result_data[i]);
+                        content=content+"<tr> <td>"+current_record.Sl_No+"</td>  <td>"+current_record.Item+"</td>   <td>"+current_record.Quantity+"</td>  <td>"+current_record.Unit+"</td>  <td>"+current_record.Department+"</td>  <td>"+current_record.Notes+"</td>  </tr>"
+                        
+                    }
+                    document.getElementById("result_area").innerHTML=content;
+                }
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+[
+    {
+      "Sl_No": 1,
+      "Item": "Rice",
+      "Quantity": "05",
+      "Unit": "Kg",
+      "Department": "Food",
+      "Notes": "For Biriyani"
+      
+    },
+
+    {
+        "Sl_No": 2,
+        "Item": "Wheat",
+        "Quantity": "03",
+        "Unit": "Kg",
+        "Department": "Food",
+        "Notes": "For Chappathi"
+        
+      },
+
+      {
+        "Sl_No": 3,
+        "Item": "Led Bulb",
+        "Quantity": "02",
+        "Unit": "Watt",
+        "Department": "Electronic",
+        "Notes": "For sitout"
+        
+      },
+
+      {
+        "Sl_No": 4,
+        "Item": "Book",
+        "Quantity": "05",
+        "Unit": "Nil",
+        "Department": "Stationary",
+        "Notes": "For Kids"
+        
+      },
+
+      {
+        "Sl_No": 5,
+        "Item": "Pencil",
+        "Quantity": "05",
+        "Unit": "Nil",
+        "Department": "Stationary",
+        "Notes": "For kids"
+        
+      },
+
+      {
+        "Sl_No": 6,
+        "Item": "Mats",
+        "Quantity": "03",
+        "Unit": "Nil",
+        "Department": "Cloth",
+        "Notes": "For Floor"
+        
+      }
+]
